@@ -7,6 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+	this.route('juicebook');
+	this.route('juice-calculator');
 });
 
 export default Router;
