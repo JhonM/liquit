@@ -17,6 +17,14 @@ module.exports = function(environment) {
       }
     },
 
+	// New environments
+	firebase: {
+    apiKey: 'AIzaSyCvNWxn46zR80sA8SpTXjKzUqJNVl8S5PY',
+    authDomain: 'liquit-database.firebaseapp.com',
+    databaseURL: 'https://liquit-database.firebaseio.com',
+    storageBucket: 'liquit-database.appspot.com',
+	},
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
