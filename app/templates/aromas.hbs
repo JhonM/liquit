@@ -1,0 +1,46 @@
+{{navigation-bar}}
+<div class="wrap">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1>Aromas</h1>
+			</div>
+		</div>
+		<div class="add-aroma">
+			<h2>New Post</h2>
+			<ul class="post-publish">
+				<li>
+					{{input value=name placeholder="Name"}}
+				</li>
+				<li>
+					{{input value=brand placeholder="Brand"}}
+				</li>
+				<li>
+					{{input value=vendor placeholder="Vendor"}}
+				</li>
+				<li>
+					{{input value=price placeholder="Price"}}
+				</li>
+				<li>
+					{{input value=amount placeholder="Amount"}}
+				</li>
+				<li>
+					{{textarea value=description placeholder="Description"}}
+				</li>
+				<li>
+					<button {{action "publishPost"}}>Publish</button>
+				</li>
+			</ul>
+		</div>
+		<div class="show-aromas">
+			{{#each model as |aroma|}}
+  				<div>{{aroma.name}}</div>
+  				<div>{{aroma.brand}}</div>
+				<div>{{aroma.vendor}}</div>
+				<div>{{aroma.price}}</div>
+				<div>{{aroma.amount}}</div>
+				<div>{{aroma.description}}</div>
+			{{/each}}
+		</div>
+	</div>
+</div>
