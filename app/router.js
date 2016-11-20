@@ -8,10 +8,10 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('aromas', function(){
-      this.route('new');
+	  this.route('new');
   });
   this.route('recipes', function() {
-    this.route('new');
+	  this.route('new');
   });
 });
 
