@@ -1,0 +1,26 @@
+<div class="add-aroma">
+	<h2>New Aroma</h2>
+	<ul class="post-publish">
+		<li>
+			{{input value=name placeholder="Name"}}
+		</li>
+		<li>
+			{{input value=brand placeholder="Brand"}}
+		</li>
+		<li>
+			{{input value=vendor placeholder="Vendor"}}
+		</li>
+		<li>
+			{{input value=price placeholder="Price"}}
+		</li>
+		<li>
+			{{input value=amount placeholder="Amount"}}
+		</li>
+		<li>
+			{{textarea value=description placeholder="Description"}}
+		</li>
+		<li>
+			<button {{action "publishPost"}}>Publish</button>
+		</li>
+	</ul>
+</div>
