@@ -1,0 +1,18 @@
+{{outlet}}
+<div class="wrap">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1>Aromas</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				{{#link-to "aromas.new"}}New{{/link-to}}
+			</div>
+		</div>
+		{{#each model as |aroma|}}
+			{{aromas-list name=aroma.name brand=aroma.brand vendor=aroma.vendor price=aroma.price amount=aroma.amount description=aroma.description}}
+		{{/each}}
+	</div>
+</div>
