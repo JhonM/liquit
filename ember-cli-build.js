@@ -8,9 +8,11 @@ module.exports = function(defaults) {
         paths: [
           'bower_components/semantic-ui'
         ]
-      }
+	},
 	// Add options here
+	//
   });
+  app.import('bower_components/flexboxgrid-sass/dist/flexboxgrid.css');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
