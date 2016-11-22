@@ -1,6 +1,19 @@
-<p>
-  {{link-to "Recipe list" "recipes.index" }}
-</p>
+{{header-navigation}}
 
-<h1>New Recipe</h1>
-{{partial "recipes/form"}}
+<div class="row">
+	<div class="small-12 columns">
+		<p>
+			{{link-to "Recipe list" "recipes.index" }}
+		</p>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
+		<h1>New Recipe</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
+		{{partial "recipes/form"}}
+	</div>
+</div>

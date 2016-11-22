@@ -1,60 +1,72 @@
-<h1>Aromas list</h1>
+{{header-navigation}}
+<div class="row">
+	<div class="small-12 columns">
+		<h1>Aromas list</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
+		<p>
+			{{link-to "New Aroma" "aromas.new" }}
+		</p>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
+		{{#if model.length}}
+			<table>
+				<thead>
+					<tr>
+						<th>
+							Name
+						</th>
+						<th>
+							Vendor
+						</th>
+						<th>
+							Price
+						</th>
+						<th>
+							Amount
+						</th>
+						<th colspan="3">
+							Actions
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each model as |aroma|}}
+						<tr>
+							<td>
+								{{aroma.name}}
+							</td>
+							<td>
+								{{aroma.vendor}}
+							</td>
+							<td>
+								{{aroma.price}}
+							</td>
+							<td>
+								{{aroma.amount}}
+							</td>
+							<td>
+								{{link-to "Edit" "aromas.edit" aroma}}
+							</td>
+							<td>
+								{{link-to "Show" "aromas.show" aroma}}
+							</td>
+							<td>
+								<a href="#" {{action "remove" aroma}}>Remove</a>
+							</td>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		{{else}}
+			<p id="blankslate">
+				No Aromas found
+			</p>
+		{{/if}}
 
-<p>
-  {{link-to "New Aroma" "aromas.new" }}
-</p>
-
-{{#if model.length}}
-  <table>
-    <thead>
-      <tr>
-        <th>
-          Name
-        </th>
-        <th>
-          Vendor
-        </th>
-        <th>
-          Price
-        </th>
-        <th>
-          Amount
-        </th>
-        <th colspan="3">
-          Actions
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each model as |aroma|}}
-        <tr>
-          <td>
-            {{aroma.name}}
-          </td>
-          <td>
-            {{aroma.vendor}}
-          </td>
-          <td>
-            {{aroma.price}}
-          </td>
-          <td>
-            {{aroma.amount}}
-          </td>
-          <td>
-            {{link-to "Edit" "aromas.edit" aroma}}
-          </td>
-          <td>
-            {{link-to "Show" "aromas.show" aroma}}
-          </td>
-          <td>
-            <a href="#" {{action "remove" aroma}}>Remove</a>
-          </td>
-        </tr>
-      {{/each}}
-    </tbody>
-  </table>
-{{else}}
-  <p id="blankslate">
-    No Aromas found
-  </p>
-{{/if}}
+	</div>
+</div>

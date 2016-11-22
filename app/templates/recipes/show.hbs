@@ -1,16 +1,30 @@
-<p>
-  {{link-to "Recipe list" "recipes.index" }}
-</p>
+{{header-navigation}}
 
-<h1>Recipe show</h1>
-
-<p>
-  <strong>Name:</strong>
-  <span>{{model.name}}</span>
-</p>
-
-<p>
-  <strong>Ingredient:</strong>
-  <span>{{model.ingredient}}</span>
-</p>
-
+<div class="row">
+	<div class="small-12 columns">
+		<p>
+			{{link-to "Recipe list" "recipes.index" }}
+		</p>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
+		<h1>Recipe show</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
+		<p>
+			<strong>Name:</strong>
+			<span>{{model.name}}</span>
+		</p>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
+		<p>
+			<strong>Ingredient:</strong>
+			<span>{{model.ingredient}}</span>
+		</p>
+	</div>
+</div>
