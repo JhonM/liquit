@@ -1,4 +1,14 @@
 export default function() {
+this.get('/aromas');
+this.get('/aromas/:id');
+this.post('/aromas');
+this.del('/aromas/:id');
+this.patch('/aromas/:id');
+this.get('/recipes');
+this.get('/recipes/:id');
+this.post('/recipes');
+this.del('/recipes/:id');
+this.patch('/recipes/:id');
 
   // These comments are here to help you get started. Feel free to delete them.
 
