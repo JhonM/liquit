@@ -1,13 +1,9 @@
 {{header-navigation}}
 <div class="row">
 	<div class="small-12 columns">
-		<p>
-			<strong>Name:</strong>
-			<span>{{model.name}}</span>
-		</p>
+		<h1>{{model.name}}</h1>
 	</div>
 </div>
-
 <div class="row">
 	<div class="small-12 columns">
 		<p>
@@ -32,5 +28,26 @@
 			<strong>Amount:</strong>
 			<span>{{model.amount}}</span>
 		</p>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
+		<p>
+			<strong>Mix Ratio</strong>
+			<span>{{model.mixRatio}}</span>
+		</p>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
+		<p>
+			<strong>Link:</strong>
+			<span>{{model.link}}</span>
+		</p>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
+		{{#link-to "aromas.index" class="alert button"}}Go Back{{/link-to}}
 	</div>
 </div>

@@ -1,5 +1,4 @@
 {{header-navigation}}
-
 <div class="row">
 	<div class="small-12 columns">
 		<h1>{{model.name}}</h1>
@@ -11,5 +10,10 @@
 			<strong>Ingredient:</strong>
 			<span>{{model.ingredient}}</span>
 		</p>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
+		{{#link-to "recipes.index" class="alert button"}}Go Back{{/link-to}}
 	</div>
 </div>

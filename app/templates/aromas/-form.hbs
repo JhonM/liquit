@@ -1,35 +1,56 @@
 <form {{action "save" on="submit"}}>
-	<div>
-		<label>
-      Name
-      {{input type="text" value=model.name}}
-    </label>
+	<div class="row">
+		<div class="medium-6 columns">
+			<label>
+		      Name
+		      {{input type="text" placeholder="Donut" value=model.name}}
+		    </label>
+		</div>
 	</div>
-	<div>
-		<label>
-      Vendor
-      {{input type="text" value=model.vendor}}
-    </label>
+	<div class="row">
+		<div class="medium-6 columns">
+			<label>
+		      Vendor
+		      {{input type="text" placeholder="Capella" value=model.vendor}}
+		    </label>
+		</div>
 	</div>
-	<div>
-		<label>
-      Price
-      {{input type="text" value=model.price}}
-    </label>
+	<div class="row">
+		<div class="medium-6 columns">
+			<label>
+		      Price
+		      {{input type="number" placeholder="10" value=model.price}}
+		    </label>
+		</div>
 	</div>
-	<div>
-		<label>
-      Amount
-      {{input type="text" value=model.amount}}
-    </label>
+	<div class="row">
+		<div class="medium-6 columns">
+			<label>
+		      Amount
+		      {{input type="number" placeholder="10" value=model.amount}}
+		    </label>
+		</div>
 	</div>
-	<div>
-	  <label>
-		Link to webshop
-		{{input type="text" value=model.link}}
-	  </label>
+	<div class="row">
+		<div class="medium-6 columns">
+			<label>
+		      Mix ratio
+		      {{input type="number" placeholder="10" value=model.mixRatio}}
+		    </label>
+		</div>
 	</div>
-	<div>
-		<input type="submit" value="Save">
+	<div class="row">
+		<div class="medium-6 columns">
+			<label>
+				Link to webshop
+				{{input type="text" placeholder="http://www.webshop.com" value=model.link}}
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="medium-6 columns">
+			<button type="submit" class="success button" value="Save">Save</button>
+			{{#link-to "aromas.index" class="alert button"}}Cancel{{/link-to}}
+		</div>
 	</div>
 </form>
