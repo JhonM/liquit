@@ -1,3 +1,14 @@
-{{outlet}}
-{{header-navigation}}
-SHIT
+{{outlet}} {{header-navigation}}
+<div class="row">
+    <div class="small-12 columns">
+        {{#each model as |aroma|}}
+        <div class="callout">
+            <div class="row">
+                <div class="small-12 columns">
+                    <h2>{{aroma.name}}</h2>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
