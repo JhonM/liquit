@@ -37,16 +37,3 @@
     </div>
   </div>
 </form>
-
-
---new--
-
-<p>ingredients are: {{model.ingredient}}</p>
-
-{{#each model
-    as
-    |ingredient|}}
-  <p> {{input value=recipe.ingredient}} </p>
-{{/each}}
-
-<button {{action 'add'}}>insert component </button>
