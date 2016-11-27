@@ -1,35 +1,52 @@
 <form {{action "save" on="submit"}}>
-	<div class="row">
-		<div class="medium-6 columns">
-			<label>
+  <div class="row">
+    <div class="medium-12 columns">
+      <label>
       		Name
      		{{input type="text" value=model.name}}
     		</label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="medium-6 columns">
-			<label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-8 columns">
+      <label>
       		Ingredient
       		{{input type="text" value=model.ingredient}}
     		</label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="medium-6 columns">
-			<button type="submit" class="success button" value="Save">Save</button>
-			{{#link-to "recipes.index" class="alert button"}}Cancel{{/link-to}}
-		</div>
-	</div>
+    </div>
+    <div class="medium-4 columns">
+      <label>
+      		Amount
+      		{{input type="text" value=model.ingredient}}
+    		</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-12 columns">
+      <button type="button" class="success button" value="Add-ingedient">Add Ingredient</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-12 columns">
+      <button type="submit"
+          class="success button"
+          value="Save">Save</button>
+      {{#link-to "recipes.index"
+          class="alert button"
+          }}Cancel{{/link-to}}
+    </div>
+  </div>
 </form>
 
 
 --new--
 
-  <p>ingredients are: {{model.ingredient}}</p>
+<p>ingredients are: {{model.ingredient}}</p>
 
-  {{#each model as |ingredient|}}
-	<p>  {{input value=recipe.ingredient}} </p>
-  {{/each}}
+{{#each model
+    as
+    |ingredient|}}
+  <p> {{input value=recipe.ingredient}} </p>
+{{/each}}
 
-  <button {{action 'add'}}>insert component </button>
+<button {{action 'add'}}>insert component </button>
