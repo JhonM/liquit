@@ -7,33 +7,11 @@
     		</label>
     </div>
   </div>
-  <div class="row">
-    <div class="medium-8 columns">
-      <label>
-      		Ingredient
-      		{{input type="text" value=model.ingredient}}
-    		</label>
-    </div>
-    <div class="medium-4 columns">
-      <label>
-      		Amount
-      		{{input type="text" value=model.ingredient}}
-    		</label>
-    </div>
-  </div>
+  {{add-ingredient action='add'}}
   <div class="row">
     <div class="medium-12 columns">
-      <button type="button" class="success button" value="Add-ingedient">Add Ingredient</button>
-    </div>
-  </div>
-  <div class="row">
-    <div class="medium-12 columns">
-      <button type="submit"
-          class="success button"
-          value="Save">Save</button>
-      {{#link-to "recipes.index"
-          class="alert button"
-          }}Cancel{{/link-to}}
+      <button type="submit" class="success button" value="Save">Save</button>
+      {{#link-to "recipes.index" class="alert button"}}Cancel{{/link-to}}
     </div>
   </div>
 </form>
