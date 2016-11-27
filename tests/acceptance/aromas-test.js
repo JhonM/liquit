@@ -10,6 +10,7 @@ module('Acceptance: Aroma', {
   beforeEach: function() {
     application = startApp();
     originalConfirm = window.confirm;
+    window.server.loadFixtures();
     window.confirm = function() {
       confirmCalledWith = [].slice.call(arguments);
       return true;
