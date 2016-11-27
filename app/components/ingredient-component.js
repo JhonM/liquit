@@ -9,17 +9,9 @@ export default Ember.Component.extend({
     ingredients: Ember.computed('ingredient.@each.name', function () {
 		return this
 			.get('ingredient')
-			.mapBy('name', 'amount')
-			.join(', ');
-	}),
-    /*
-    ingredients: Ember.computed('ingredient.@each.name', function () {
-		return this
-			.get('ingredient')
 			.mapBy('name')
 			.join(', ');
 	}),
-    */
 	actions: {
 		add: function () {
 			this
