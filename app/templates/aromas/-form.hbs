@@ -32,23 +32,31 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="medium-6 columns">
+		<div class="medium-12 columns">
 			<label>
 		      Mix ratio
 		      {{input type="number" placeholder="10" value=model.mixRatio}}
 		    </label>
 		</div>
 	</div>
-	<div class="row">
-		<div class="medium-6 columns">
+    <div class="row">
+		<div class="medium-12 columns">
 			<label>
 				Link to webshop
-				{{input type="text" placeholder="http://www.webshop.com" value=model.link}}
+				{{input type="text" min="0" max="10" placeholder="http://www.webshop.com" value=model.link}}
+			</label>
+		</div>
+	</div>
+    <div class="row">
+		<div class="medium-12 columns">
+			<label>
+				Score
+				{{input type="number" placeholder="score 1-10" value=model.score}}
 			</label>
 		</div>
 	</div>
 	<div class="row">
-		<div class="medium-6 columns">
+		<div class="medium-12 columns">
 			<button type="submit" class="success button" value="Save">Save</button>
 			{{#link-to "aromas.index" class="alert button"}}Cancel{{/link-to}}
 		</div>

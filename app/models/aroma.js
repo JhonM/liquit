@@ -6,5 +6,6 @@ export default DS.Model.extend({
   price: DS.attr('number'),
   amount: DS.attr('number'),
   mixRatio: DS.attr('number'),
-  link: DS.attr('string')
+  link: DS.attr('string'),
+  score: DS.attr('number')
 });
