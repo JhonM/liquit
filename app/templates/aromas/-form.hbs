@@ -19,7 +19,7 @@
 		<div class="medium-12 columns">
 			<label>
 		      Price
-		      {{input type="number" placeholder="10" value=model.price}}
+		      {{input type="number" min="0" step="any" placeholder="10" value=model.price}}
 		    </label>
 		</div>
 	</div>
@@ -27,7 +27,7 @@
 		<div class="medium-12 columns">
 			<label>
 		      Amount
-		      {{input type="number" placeholder="10" value=model.amount}}
+		      {{input type="number" min="0" step="any" placeholder="10" value=model.amount}}
 		    </label>
 		</div>
 	</div>
@@ -35,7 +35,7 @@
 		<div class="medium-12 columns">
 			<label>
 		      Mix ratio
-		      {{input type="number" placeholder="10" value=model.mixRatio}}
+		      {{input type="number" min="0" step="any" placeholder="10" value=model.mixRatio}}
 		    </label>
 		</div>
 	</div>
@@ -43,7 +43,15 @@
 		<div class="medium-12 columns">
 			<label>
 				Link to webshop
-				{{input type="text" min="0" max="10" placeholder="http://www.webshop.com" value=model.link}}
+				{{input type="text" placeholder="http://www.webshop.com" value=model.link}}
+			</label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="medium-12 columns">
+			<label>
+				Date Bought
+				{{input type="date" placeholder="9-2-2016" value=model.dateBought}}
 			</label>
 		</div>
 	</div>
@@ -51,7 +59,7 @@
 		<div class="medium-12 columns">
 			<label>
 				Score
-				{{input type="number" placeholder="score 1-10" value=model.score}}
+				{{input type="number" min="0" max="10" step=".1" placeholder="score 1-10" value=model.score}}
 			</label>
 		</div>
 	</div>

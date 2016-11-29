@@ -2,6 +2,7 @@
 {{header-navigation}}
 <div class="row">
     <div class="small-12 columns">
+		{{model.aroma.name}}
         <h2>Aromas</h2>
         {{#each model as |aroma|}}
             {{#link-to "aromas.show" aroma}}

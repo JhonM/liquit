@@ -28,6 +28,9 @@
 						<th>
 							Link
 						</th>
+						<th>
+							Date bought
+						</th>
                         <th>
 							Score
 						</th>
@@ -37,7 +40,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					{{#each model as |aroma|}}
+					{{#each aroma as |aromas|}}
 						<tr>
 							<td>
 								{{aroma.name}}
@@ -56,6 +59,9 @@
 							</td>
 							<td>
 								{{aroma.link}}
+							</td>
+							<td>
+								{{aroma.dateBought}}
 							</td>
                             <td>
 								{{aroma.score}}
