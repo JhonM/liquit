@@ -1,35 +1,35 @@
 {{outlet}}
 {{header-navigation}}
-<div class="row">
-    <div class="small-12 columns">
-		{{model.aroma.name}}
-        <h2>Aromas</h2>
-        {{#each model as |aroma|}}
-            {{#link-to "aromas.show" aroma}}
-                <div class="callout">
-                    <div class="row">
-                        <div class="small-12 columns">
-                            <h2>{{aroma.name}}</h2>
-                        </div>
-                    </div>
-                </div>
-            {{/link-to}}
-        {{/each}}
-    </div>
-</div>
-<div class="row">
-    <div class="small-12 columns">
-        <h2>Recipes</h2>
-        {{#each model as |recipe|}}
-            {{#link-to "recipes.show" recipe}}
-                <div class="callout">
-                    <div class="row">
-                        <div class="small-12 columns">
-                            <h2>{{recipe.name}}</h2>
-                        </div>
-                    </div>
-                </div>
-            {{/link-to}}
-        {{/each}}
-    </div>
-</div>
+	<div class="row">
+	    <div class="small-12 columns">
+			{{model.aroma.name}}
+	        <h2>Aromas</h2>
+	        {{#each model.aromas as |aroma|}}
+	            {{#link-to "aromas.show" aroma}}
+	                <div class="callout">
+	                    <div class="row">
+	                        <div class="small-12 columns">
+	                            <h2>{{aroma.name}}</h2>
+	                        </div>
+	                    </div>
+	                </div>
+	            {{/link-to}}
+	        {{/each}}
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="small-12 columns">
+	        <h2>Recipes</h2>
+	        {{#each model.recipes as |recipe|}}
+	            {{#link-to "recipes.show" recipe}}
+	                <div class="callout">
+	                    <div class="row">
+	                        <div class="small-12 columns">
+	                            <h2>{{recipe.name}}</h2>
+	                        </div>
+	                    </div>
+	                </div>
+	            {{/link-to}}
+	        {{/each}}
+	    </div>
+	</div>
