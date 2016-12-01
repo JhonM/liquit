@@ -22,9 +22,7 @@ module.exports = function (environment) {
 			databaseURL: 'https://liquit-database.firebaseio.com',
 			storageBucket: 'liquit-database.appspot.com',
 		},
-		
 		APP: {
-			// Initialize default application.
 			// Here you can pass flags/options to your application instance
 			// when it is created
 		}
