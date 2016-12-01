@@ -9,6 +9,10 @@ module.exports = function (defaults) {
 
 			]
 		},
+		babel: {
+      		optional: ['es6.spec.symbols'],
+      		includePolyfill: true
+  		},
 		// Add options here
 		"ember-cli-foundation-6-sass": {
 			"foundationJs": "all"
