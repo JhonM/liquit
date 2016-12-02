@@ -1,33 +1,39 @@
 {{outlet}}
 {{header-navigation}}
 	<div class="row">
-	    <div class="small-12 columns">
+	    <div class="column">
 			{{model.aroma.name}}
 	        <h2>Aromas</h2>
 	        {{#each model.aromas as |aroma|}}
 	            {{#link-to "aromas.show" aroma}}
 	                <div class="callout">
-	                    <div class="row">
-	                        <div class="small-12 columns">
-	                            <h2>{{aroma.name}}</h2>
-	                        </div>
-	                    </div>
+	                    <h2>{{aroma.name}}</h2>
+						<div class="sub-content">
+							<h3>{{aroma.vendor}}</h3>
+							<h3>{{aroma.price}}</h3>
+							<h3>{{aroma.score}}</h3>
+						</div>
 	                </div>
 	            {{/link-to}}
 	        {{/each}}
 	    </div>
 	</div>
 	<div class="row">
-	    <div class="small-12 columns">
+	    <div class="column">
 	        <h2>Recipes</h2>
 	        {{#each model.recipes as |recipe|}}
 	            {{#link-to "recipes.show" recipe}}
 	                <div class="callout">
-	                    <div class="row">
-	                        <div class="small-12 columns">
-	                            <h2>{{recipe.name}}</h2>
-	                        </div>
-	                    </div>
+	                    <h2>{{recipe.name}}</h2>
+						<div class="sub-content">
+							<h3>{{recipe.ingredients}}</h3>
+							<ul class="ingredients">
+								<li class="ingredient"></li>
+							</ul>
+							<h3>{{aroma.price}}</h3>
+							<h3>{{aroma.score}}</h3>
+						</div>
+
 	                </div>
 	            {{/link-to}}
 	        {{/each}}
