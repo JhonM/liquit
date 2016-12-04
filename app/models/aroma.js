@@ -8,5 +8,6 @@ export default DS.Model.extend({
   amount: DS.attr('number'),
   mixRatio: DS.attr('number'),
   link: DS.attr('string'),
-  score: DS.attr('number')
+  score: DS.attr('number'),
+  recipe: DS.belongsTo('recipe')
 });
