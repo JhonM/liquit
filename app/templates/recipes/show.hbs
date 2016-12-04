@@ -6,10 +6,54 @@
 </div>
 <div class="row">
 	<div class="small-12 columns">
-		<p>
-			<strong>Ingredient:</strong>
-			<span>{{model.ingredient}}</span>
-		</p>
+		<h4>Date made:</h4>
+		<p>{{model.brewDate}}</p>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
+		<h4>Recipe description:</h4>
+		<p>{{model.description}}</p>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
+		<h4>Brew plan:</h4>
+		<p>{{model.brewPlan}}</p>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
+		<h4>Steep time:</h4>
+		<p>{{model.steepTime}}</p>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
+		<h4>Ingredients:</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>
+						Ingredient
+					</th>
+					<th>
+						Amount
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						{{ingredient.name}}
+					</td>
+					<td>
+						{{ingredient.ingredient}}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
 	</div>
 </div>
 <div class="row">
