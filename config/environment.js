@@ -38,6 +38,10 @@ module.exports = function (environment) {
 
 	if (environment === 'test') {
 		// Testem prefers this...
+
+		ENV.firebase = 'https://liquit-database.firebaseio.com/';
+
+
 		ENV.locationType = 'none';
 
 		// keep test console output quieter
