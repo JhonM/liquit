@@ -1,33 +1,49 @@
 <form {{action "save" on="submit"}}>
-  <div class="row">
-    <div class="medium-12 columns">
-      <label>
+	<div class="row">
+		<div class="medium-12 columns">
+			<label>
       		Name
      		{{input type="text" value=model.name}}
     		</label>
-    </div>
-  </div>
-  <div class="row">
-	<div class="medium-12 columns">
-	  <label>
-		   Date made
-		   {{input type="date" value=model.dateMade}}
-		   </label>
+		</div>
 	</div>
-  </div>
-  <div class="row">
-  <div class="medium-12 columns">
-	<label>
-		 Add Aroma
-		 {{#each}}
-		 {{/each}}
+	<div class="row">
+		<div class="medium-12 columns">
+			<label>
+		   Brew Date
+		   {{input type="date" value=model.brewDAte}}
+		   </label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="medium-12 columns">
+			<label>
+		Description
+		 {{input type="text" value=model.description}}
 		 </label>
-  </div>
-  </div>
-  <div class="row">
-    <div class="medium-12 columns">
-      <button type="submit" class="success button" value="Save">Save</button>
-      {{#link-to "recipes.index" class="alert button"}}Cancel{{/link-to}}
-    </div>
-  </div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="medium-12 columns">
+			<label>
+		 Steep time
+		 {{input type="number" value=model.steepTime}}
+		 </label>
+		</div>
+	</div>
+	<div class="row">
+		<div class="medium-12 columns">
+			<label>
+		 Brew Plan
+		 {{input type="text" value=model.brewPlan}}
+		 </label>
+		</div>
+	</div>
+	{{attach-aroma}}
+	<div class="row">
+		<div class="medium-12 columns">
+			<button type="submit" class="success button" value="Save">Save</button>
+			{{#link-to "recipes.index" class="alert button" }}Cancel{{/link-to}}
+		</div>
+	</div>
 </form>
