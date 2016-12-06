@@ -6,7 +6,7 @@
 </div>
 <div class="row">
 	<div class="small-12 columns">
-		{{#if model.length}}
+		{{#if model.recipes.length}}
 			<table>
 				<thead>
 					<tr>
@@ -28,7 +28,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					{{#each model as |recipe|}}
+					{{#each model.recipes as |recipe|}}
 						<tr>
 							<td>
 								{{recipe.name}}
