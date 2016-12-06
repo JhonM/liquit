@@ -1,9 +1,9 @@
 {
-  "name": "liquit",
-  "dependencies": {
-    "ember": "latest",
-    "ember-cli-shims": "latest",
-    "firebase": "latest",
-    "foundation-sites": "latest"
-  }
+    "name": "liquit",
+    "dependencies": {
+        "ember": "~2.10.0",
+        "ember-cli-shims": "0.1.3",
+        "firebase": "^3.0.0",
+        "foundation-sites": "^6.2.1"
+    }
 }
