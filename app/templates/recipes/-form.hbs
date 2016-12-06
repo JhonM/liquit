@@ -3,7 +3,7 @@
 		<div class="medium-12 columns">
 			<label>
       		Name
-     		{{input type="text" value=model.name}}
+     		{{input type="text" value=model.newRecipe.name}}
     		</label>
 		</div>
 	</div>
@@ -11,7 +11,7 @@
 		<div class="medium-12 columns">
 			<label>
 		   Brew Date
-		   {{input type="date" value=model.brewDAte}}
+		   {{input type="date" value=model.newRecipe.brewDAte}}
 		   </label>
 		</div>
 	</div>
@@ -19,7 +19,7 @@
 		<div class="medium-12 columns">
 			<label>
 		Description
-		 {{input type="text" value=model.description}}
+		 {{input type="text" value=model.newRecipe.description}}
 		 </label>
 		</div>
 	</div>
@@ -27,7 +27,7 @@
 		<div class="medium-12 columns">
 			<label>
 		 Steep time
-		 {{input type="number" value=model.steepTime}}
+		 {{input type="number" value=model.newRecipe.steepTime}}
 		 </label>
 		</div>
 	</div>
@@ -35,7 +35,7 @@
 		<div class="medium-12 columns">
 			<label>
 		 Brew Plan
-		 {{input type="text" value=newRecipe.brewPlan}}
+		 {{input type="text" value=model.newRecipe.brewPlan}}
 		 </label>
 		</div>
 	</div>
