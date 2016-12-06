@@ -19,6 +19,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.18.2",
     "broccoli-asset-rev": "latest",
     "broccoli-clean-css": "latest",
     "ember-ajax": "latest",
