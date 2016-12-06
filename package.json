@@ -25,7 +25,7 @@
     "ember-ajax": "latest",
     "ember-cli": "latest",
     "ember-cli-app-version": "latest",
-    "ember-cli-babel": "latest",
+    "ember-cli-babel": "^5.1.10",
     "ember-cli-dependency-checker": "latest",
     "ember-cli-foundation-6-sass": "latest",
     "ember-cli-htmlbars": "latest",
