@@ -1,0 +1,58 @@
+//Global
+body{
+    background-color: $color-pri;
+    color: $color-sec;
+}
+
+.callout{
+    color: $color-sec;
+    @include border-radius(2px);
+}
+
+a{
+    color: $color-sec;
+
+    &:hover,
+    &:focus{
+        color: darken( $color-sec, $amount-darken );
+    }
+}
+
+.button{
+    background-color: $color-sec;
+
+    &:hover{
+        background-color: darken( $color-sec, $amount-darken );
+    }
+}
+
+table{
+	tbody, thead{
+		background-color: transparent;
+		border-color: lighten( $color-pri, $amount-lighten );
+	}
+
+	th {
+		color: $color-sec;
+	}
+
+
+}
+//Navigation
+
+.top-bar{
+    & ul{
+        background-color: lighten( $color-pri, $amount-lighten );
+    }
+    background-color: lighten( $color-pri, $amount-lighten );
+}
+
+.dropdown.menu{
+    li.is-dropdown-submenu-parent{
+        a{
+            &::after{
+                border-color: $color-sec transparent transparent;
+            }
+        }
+    }
+}
