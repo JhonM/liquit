@@ -3,8 +3,9 @@
 		<div class="medium-12 columns">
 			<label>
       		Name
-			{{model.name}}
+			{{#if editing "zoooom" "putt-putt-putt"}}
      		{{input type="text" value=model.newRecipe.name}}
+			{{/if}}
     		</label>
 		</div>
 	</div>
