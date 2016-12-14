@@ -29,6 +29,7 @@ Router.map(function() {
       path: ':aroma_id'
     });
   });
+  this.route('search');
 });
 
 export default Router;
