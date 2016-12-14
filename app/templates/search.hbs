@@ -1,1 +1,28 @@
-{{outlet}}
+{{header-navigation}}
+<div class="row">
+	<div class="column">
+		<div class="callout">
+			{{input value=search}}
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="column">
+		Recipes
+		<ul>
+			{{#each model.recipes as |recipe|}}
+				<li>{{recipe.name}}</li>
+			{{/each}}
+		</ul>
+	</div>
+</div>
+<div class="row">
+	<div class="column">
+		Aroma's
+		<ul>
+			{{#each model.aromas as |aroma|}}
+				<li>{{aroma.name}}</li>
+			{{/each}}
+		</ul>
+	</div>
+</div>
