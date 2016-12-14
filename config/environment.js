@@ -16,6 +16,7 @@ module.exports = function (environment) {
 				Date: false
 			}
 		},
+
 		firebase: {
 			apiKey: 'AIzaSyCvNWxn46zR80sA8SpTXjKzUqJNVl8S5PY',
 			authDomain: 'liquit-database.firebaseapp.com',
@@ -25,7 +26,18 @@ module.exports = function (environment) {
 		APP: {
 			// Here you can pass flags/options to your application instance
 			// when it is created
+		},
+		googleFonts: [
+			'Open+Sans:300,400,700',
+	 		'Gloria+Hallelujah:400'
+		],
+
+		// Set or update content security policies
+		contentSecurityPolicy: {
+			'font-src': "'self' fonts.gstatic.com",
+			'style-src': "'self' fonts.googleapis.com"
 		}
+
 	};
 
 	if (environment === 'development') {
@@ -54,6 +66,8 @@ module.exports = function (environment) {
 	if (environment === 'production') {
 
 	}
+
+
 
 	return ENV;
 };
