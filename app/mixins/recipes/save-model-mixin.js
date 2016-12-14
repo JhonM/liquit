@@ -4,8 +4,7 @@ export default Ember.Mixin.create({
   actions: {
     save: function() {
       var route = this;
-      this.currentModel.save().then(function() {
-        route.transitionTo('recipes');
+      this.newRecipe.save().then(function() {
       }, function() {
         console.log('Failed to save the model');
       });

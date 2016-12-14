@@ -3,7 +3,7 @@
 		<div class="medium-12 columns">
 			<label>
       		Name
-     		{{input type="text" value=model.name}}
+     		{{input type="text" value=model.newRecipe.name}}
     		</label>
 		</div>
 	</div>
@@ -11,7 +11,7 @@
 		<div class="medium-12 columns">
 			<label>
 		   Brew Date
-		   {{input type="date" value=model.brewDAte}}
+		   {{input type="date" value=model.newRecipe.brewDAte}}
 		   </label>
 		</div>
 	</div>
@@ -19,7 +19,7 @@
 		<div class="medium-12 columns">
 			<label>
 		Description
-		 {{input type="text" value=model.description}}
+		 {{input type="text" value=model.newRecipe.description}}
 		 </label>
 		</div>
 	</div>
@@ -27,7 +27,7 @@
 		<div class="medium-12 columns">
 			<label>
 		 Steep time
-		 {{input type="number" value=model.steepTime}}
+		 {{input type="number" value=model.newRecipe.steepTime}}
 		 </label>
 		</div>
 	</div>
@@ -35,14 +35,13 @@
 		<div class="medium-12 columns">
 			<label>
 		 Brew Plan
-		 {{input type="text" value=model.brewPlan}}
+		 {{input type="text" value=model.newRecipe.brewPlan}}
 		 </label>
 		</div>
 	</div>
 	<div class="row small-up-1 medium-up-2 large-up-6">
-		{{#each model as |aroma|}}
-			{{#aroma-component title="aroma.title"}}
-				{{aroma.description}}
+		{{#each model.aromas as |aroma|}}
+			{{#aroma-component name=aroma.name description=aroma.description}}
 			{{/aroma-component}}
 		{{/each}}
 	</div>

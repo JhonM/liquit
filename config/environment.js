@@ -29,7 +29,7 @@ module.exports = function (environment) {
 		},
 		googleFonts: [
 			'Open+Sans:300,400,700',
-	 		'Sacrament:300'
+	 		'Gloria+Hallelujah:400'
 		],
 
 		// Set or update content security policies
