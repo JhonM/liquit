@@ -10,5 +10,5 @@ export default DS.Model.extend({
 	mixRatio: DS.attr('number'),
 	link: DS.attr('string'),
 	score: DS.attr('number'),
-	recipe: DS.hasMany('recipe')
+	recipe: DS.belongsTo( 'recipe', { async: true } )
 });
