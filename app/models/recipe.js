@@ -7,5 +7,5 @@ export default DS.Model.extend({
   steepTime: DS.attr('string'),
   brewPlan: DS.attr('string'),
   Test: DS.attr(),
-  aromas: DS.hasMany('aroma', {async: true})
+  aromas: DS.hasMany('aroma')
 });
