@@ -67,8 +67,14 @@
     </div>
     <div class="row small-up-1 medium-up-2 large-up-6">
         {{#each model.aromas as |aroma|}}
-            {{#aroma-component name=aroma.name description=aroma.description}}
-            {{/aroma-component}}
+		<div class="column aroma">
+			<div class="callout">
+				<h5 class="aroma-title">{{aroma.name}}</h5>
+				<p class="aroma-description">{{aroma.description}}</p>
+				<button type="button" class="button" {{action "select"}}>Add aroma</button>
+		    <br>
+			</div>
+		</div>
         {{/each}}
     </div>
     <div class="row">
