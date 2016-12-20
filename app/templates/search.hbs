@@ -10,7 +10,7 @@
 	<div class="column">
 		Recipes
 		<ul>
-			{{#each model.recipes as |recipe|}}
+			{{#each recipes in model.recipes}}
 				<li>{{recipe.name}}</li>
 			{{/each}}
 		</ul>
@@ -20,7 +20,7 @@
 	<div class="column">
 		Aroma's
 		<ul>
-			{{#each model.aromas as |aroma|}}
+			{{#each aromas in model.aromas}}
 				<li>{{aroma.name}}</li>
 			{{/each}}
 		</ul>
