@@ -5,17 +5,22 @@ export default Ember.Mixin.create({
     toggleAroma: function(aromaId) {
       // Get recipe id from route(?)
       let recipeId = this.currentModel.newRecipe.id;
-      // Log the shit out of this bia
-      console.log('recipeId: %s, aromaId: %s', recipeId, aromaId)
       // Get recipe from recipe id
       let recipe = this.get('store').peekRecord('recipe', recipeId)
       // Get aroma from id passed in from hbs
       let aroma = this.get('store').peekRecord('aroma', aromaId)
-      // Get aromas property from recipe and push aroma object to it
-      recipe.get('aromas').pushObject(aroma)
+      // Get aromas property from recipe and toggle aroma to/from list
+      if(recipe.get('aromas').indexOf(aroma) === -1) {
+        // The aroma is not in the recipe
+        recipe.get('aromas').pushObject(aroma)
+        console.log('Aroma with id: %s added to recipe: %s', aromaId, recipeId)
+      } else {
+        // The aroma is in the recipe, so remove it
+        recipe.get('aromas').removeObject(aroma)
+        console.log('Aroma with id: %s removed from recipe: %s', aromaId, recipeId)
+      }
       // Save the record
       recipe.save
-      // TODO Remove aroa from recipe, if aroma is present
     },
     save: function() {
       var route = this;
