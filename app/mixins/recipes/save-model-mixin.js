@@ -14,11 +14,13 @@ export default Ember.Mixin.create({
         // The aroma is not in the recipe
         recipe.get('aromas').pushObject(aroma)
         console.log('Aroma with id: %s added to recipe: %s', aromaId, recipeId)
+
       } else {
         // The aroma is in the recipe, so remove it
         recipe.get('aromas').removeObject(aroma)
         console.log('Aroma with id: %s removed from recipe: %s', aromaId, recipeId)
       }
+      debugger
       // Save the record
       recipe.save
     },

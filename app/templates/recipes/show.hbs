@@ -43,14 +43,17 @@
 				</tr>
 			</thead>
 			<tbody>
+                {{model}}
+                {{#each aromas as |aroma|}}
 				<tr>
 					<td>
-						{{ingredient.name}}
+						{{aroma.name}}
 					</td>
 					<td>
-						{{ingredient.ingredient}}
+
 					</td>
 				</tr>
+                {{/each}}
 			</tbody>
 		</table>
 
