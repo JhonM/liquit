@@ -25,6 +25,9 @@
 						<th colspan="3">
 							Actions
 						</th>
+						<th>
+							<a href="#" {{action "removeSelected"}}>Remove</a>
+						</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -50,6 +53,9 @@
 							</td>
 							<td>
 								<a href="#" {{action "remove" recipe}}>Remove</a>
+							</td>
+							<td>
+								<input id="recipe-{{recipe.id}}" type="checkbox" />
 							</td>
 						</tr>
 					{{/each}}
