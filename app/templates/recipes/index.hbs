@@ -1,71 +1,71 @@
 {{header-navigation}}
 <div class="row">
-	<div class="small-12 columns">
-		<h1>Recipes list</h1>
-	</div>
+    <div class="small-12 columns">
+        <h1>Recipes list</h1>
+    </div>
 </div>
 <div class="row">
-	<div class="small-12 columns">
-		{{#if model.recipes.length}}
-			<table>
-				<thead>
-					<tr>
-						<th>
-							Name
-						</th>
-						<th>
-							Ingredient
-						</th>
-						<th>
-							Brew Date
-						</th>
-						<th>
-							Steep Time
-						</th>
-						<th colspan="3">
-							Actions
-						</th>
-						<th>
-							<a href="#" {{action "removeSelected"}}>Remove</a>
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					{{#each model.recipes as |recipe|}}
-						<tr>
-							<td>
-								{{recipe.name}}
-							</td>
-							<td>
-								{{recipe.ingredient}}
-							</td>
-							<td>
-								{{recipe.brewDate}}
-							</td>
-							<td>
-								{{recipe.steepTime}}
-							</td>
-							<td>
-								{{link-to "Edit" "recipes.edit" recipe}}
-							</td>
-							<td>
-								{{link-to "Show" "recipes.show" recipe}}
-							</td>
-							<td>
-								<a href="#" {{action "remove" recipe}}>Remove</a>
-							</td>
-							<td>
-								<input id="recipe-{{recipe.id}}" type="checkbox" />
-							</td>
-						</tr>
-					{{/each}}
-				</tbody>
-			</table>
-		{{else}}
-			<p id="blankslate">
-				No Recipes found
-			</p>
-		{{/if}}
+    <div class="small-12 columns">
+        {{#if model.recipes.length}}
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Ingredient
+                        </th>
+                        <th>
+                            Brew Date
+                        </th>
+                        <th>
+                            Steep Time
+                        </th>
+                        <th colspan="3">
+                            Actions
+                        </th>
+                        <th>
+                            <a href="#" {{action "removeSelected"}}>Remove</a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each model.recipes as |recipe|}}
+                        <tr>
+                            <td>
+                                {{recipe.name}}
+                            </td>
+                            <td>
+                                {{recipe.ingredient}}
+                            </td>
+                            <td>
+                                {{recipe.brewDate}}
+                            </td>
+                            <td>
+                                {{recipe.steepTime}}
+                            </td>
+                            <td>
+                                {{link-to "Edit" "recipes.edit" recipe}}
+                            </td>
+                            <td>
+                                {{link-to "Show" "recipes.show" recipe}}
+                            </td>
+                            <td>
+                                <a href="#" {{action "remove" recipe}}>Remove</a>
+                            </td>
+                            <td>
+                                <input id="recipe-{{recipe.id}}" type="checkbox" />
+                            </td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        {{else}}
+            <p id="blankslate">
+                No Recipes found
+            </p>
+        {{/if}}
 
-	</div>
+    </div>
 </div>
