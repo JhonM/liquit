@@ -1,63 +1,63 @@
 {{header-navigation}}
 <div class="row">
-	<div class="small-12 columns">
-		<h1>{{model.name}}</h1>
-	</div>
+    <div class="small-12 columns">
+        <h1>{{model.name}}</h1>
+    </div>
 </div>
 <div class="row">
-	<div class="small-12 columns">
-		<h4>Date made:</h4>
-		<p>{{model.brewDate}}</p>
-	</div>
+    <div class="small-12 columns">
+        <h4>Date made:</h4>
+        <p>{{model.brewDate}}</p>
+    </div>
 </div>
 <div class="row">
-	<div class="small-12 columns">
-		<h4>Recipe description:</h4>
-		<p>{{model.description}}</p>
-	</div>
+    <div class="small-12 columns">
+        <h4>Recipe description:</h4>
+        <p>{{model.description}}</p>
+    </div>
 </div>
 <div class="row">
-	<div class="small-12 columns">
-		<h4>Brew plan:</h4>
-		<p>{{model.brewPlan}}</p>
-	</div>
+    <div class="small-12 columns">
+        <h4>Brew plan:</h4>
+        <p>{{model.brewPlan}}</p>
+    </div>
 </div>
 <div class="row">
-	<div class="small-12 columns">
-		<h4>Steep time:</h4>
-		<p>{{model.steepTime}}</p>
-	</div>
+    <div class="small-12 columns">
+        <h4>Steep time:</h4>
+        <p>{{model.steepTime}}</p>
+    </div>
 </div>
 <div class="row">
-	<div class="small-12 columns">
-		<h4>Ingredients:</h4>
-		<table>
-			<thead>
-				<tr>
-					<th>
-						Ingredient
-					</th>
-					<th>
-						Amount
-					</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						{{ingredient.name}}
-					</td>
-					<td>
-						{{ingredient.ingredient}}
-					</td>
-				</tr>
-			</tbody>
-		</table>
+    <div class="small-12 columns">
+        <h4>Ingredients:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Ingredient
+                    </th>
+                    <th>
+                        Amount
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        {{ingredient.name}}
+                    </td>
+                    <td>
+                        {{ingredient.ingredient}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-	</div>
+    </div>
 </div>
 <div class="row">
-	<div class="small-12 columns">
-		{{#link-to "recipes.index" class="alert button"}}Go Back{{/link-to}}
-	</div>
+    <div class="small-12 columns">
+        {{#link-to "recipes.index" class="alert button" }}Go Back{{/link-to}}
+    </div>
 </div>

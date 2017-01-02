@@ -1,27 +1,35 @@
 {{yield}}
 <div class="top-bar">
-	<div class="top-bar-left">
-		{{#zf-dropdown-menu class="horizontal" }}
-			<li>
-				<a href="#">Recipes</a>
-				<ul class="menu">
-					<li>{{#link-to "recipes.new"}}New{{/link-to}}</li>
-					<li>{{#link-to "recipes.index"}}List{{/link-to}}</li>
-				</ul>
-			</li>
-			<li>
-				<a href="#">Aromas</a>
-				<ul class="menu">
-					<li>{{#link-to "aromas.new"}}New{{/link-to}}</li>
-					<li>{{#link-to "aromas.index"}}List{{/link-to}}</li>
-				</ul>
-			</li>
-		{{/zf-dropdown-menu}}
-	</div>
-	<div class="top-bar-right">
-		<ul class="menu">
-			<li><input type="search" placeholder="Search"></li>
-			<li><button type="button" class="button">Search</button></li>
-		</ul>
-	</div>
+    <div class="top-bar-left">
+        {{#zf-dropdown-menu class="horizontal" }}
+            <li>
+                <a href="#">Recipes</a>
+                <ul class="menu">
+                    <li>
+                        {{#link-to "recipes.new"}}New{{/link-to}}
+                    </li>
+                    <li>
+                        {{#link-to "recipes.index"}}List{{/link-to}}
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Aromas</a>
+                <ul class="menu">
+                    <li>
+                        {{#link-to "aromas.new"}}New{{/link-to}}
+                    </li>
+                    <li>
+                        {{#link-to "aromas.index"}}List{{/link-to}}
+                    </li>
+                </ul>
+            </li>
+        {{/zf-dropdown-menu}}
+    </div>
+    <div class="top-bar-right">
+        <ul class="menu">
+            <li><input type="search" placeholder="Search"></li>
+            <li><button type="button" class="button">Search</button></li>
+        </ul>
+    </div>
 </div>
