@@ -2,34 +2,34 @@ import Ember from 'ember';
 import config from './config/environment';
 
 const Router = Ember.Router.extend({
-  location: config.locationType,
-  rootURL: config.rootURL
+	location: config.locationType,
+	rootURL: config.rootURL
 });
 
-Router.map(function() {
-  this.route('recipes', function() {
-    this.route('new');
+Router.map(function () {
+	this.route('recipes', function () {
+		this.route('new');
 
-    this.route('edit', {
-      path: ':recipe_id/edit'
-    });
+		this.route('edit', {
+			path: ':recipe_id/edit'
+		});
 
-    this.route('show', {
-      path: ':recipe_id'
-    });
-  });
-  this.route('aromas', function() {
-    this.route('new');
+		this.route('show', {
+			path: ':recipe_id'
+		});
+	});
+	this.route('aromas', function () {
+		this.route('new');
 
-    this.route('edit', {
-      path: ':aroma_id/edit'
-    });
+		this.route('edit', {
+			path: ':aroma_id/edit'
+		});
 
-    this.route('show', {
-      path: ':aroma_id'
-    });
-  });
-  this.route('search');
+		this.route('show', {
+			path: ':aroma_id'
+		});
+	});
+	this.route('search');
 });
 
 export default Router;
