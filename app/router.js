@@ -7,6 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function () {
+    this.route('/')
+	this.route('search');
+
 	this.route('recipes', function () {
 		this.route('new');
 
@@ -29,8 +32,6 @@ Router.map(function () {
 			path: ':aroma_id'
 		});
 	});
-    this.route('/')
-	this.route('search');
 });
 
 export default Router;
