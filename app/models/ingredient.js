@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-	 aromas: DS.hasMany( 'aroma', { async: true } ),
+	 aroma: DS.belongsTo( 'aroma', { async: true } ),
 	 amount: DS.attr('number')
 });
