@@ -1,28 +1,28 @@
 {{header-navigation}}
 <div class="row">
-	<div class="column">
-		<div class="callout">
-			{{input value=search}}
-		</div>
-	</div>
+    <div class="column">
+        <div class="callout">
+            {{input value=search}}
+        </div>
+    </div>
 </div>
 <div class="row">
-	<div class="column">
-		Recipes
-		<ul>
-			{{#each recipes in model.recipes}}
-				<li>{{recipe.name}}</li>
-			{{/each}}
-		</ul>
-	</div>
+    <div class="column">
+        Recipes
+        <ul>
+            {{#each recipes in model.recipes}}
+                <li>{{recipe.name}}</li>
+            {{/each}}
+        </ul>
+    </div>
 </div>
 <div class="row">
-	<div class="column">
-		Aroma's
-		<ul>
-			{{#each aromas in model.aromas}}
-				<li>{{aroma.name}}</li>
-			{{/each}}
-		</ul>
-	</div>
+    <div class="column">
+        Aroma's
+        <ul>
+            {{#each aromas in model.aromas}}
+                <li>{{aroma.name}}</li>
+            {{/each}}
+        </ul>
+    </div>
 </div>
