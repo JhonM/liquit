@@ -76,7 +76,8 @@
                 <div class="callout">
                     <h5 class="aroma-title">{{aroma.name}}</h5>
                     <p class="aroma-description">{{aroma.description}}</p>
-                    <button type="button" class="button" {{action "toggleAroma" aroma.id}}>Toggle aroma</button>
+                    {{input type="text" value=model.ingredient.amount}}
+                    <button type="button" class="button" {{action "toggleIngredient" aroma.name model.ingredient.amount}}>Toggle aroma</button>
                     <br>
                 </div>
             </div>
