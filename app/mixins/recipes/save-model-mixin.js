@@ -12,7 +12,7 @@ export default Ember.Mixin.create({
       // Get aromas property from recipe and toggle aroma to/from list
       if(recipe.get('aromas').indexOf(aroma) === -1) {
         // The aroma is not in the recipe
-        recipe.get('aromas').pushObject(aroma)
+        recipe.get('aromas').pushObject(aroma, "bla")
         console.log('Aroma with id: %s added to recipe: %s', aromaId, recipeId)
 
       } else {
