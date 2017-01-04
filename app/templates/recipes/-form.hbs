@@ -56,12 +56,12 @@
     <div class="row">
         <div class="medium-12 columns">
             <label>
-		 Brew Plan
-         {{#if isEditing}}
-		 {{input type="text" value=model.brewPlan}}
-         {{else}}
-          {{input type="text" value=model.newRecipe.brewPlan}}
-          {{/if}}
+		Brew Plan
+        {{#if isEditing}}
+		     {{input type="text" value=model.brewPlan}}
+        {{else}}
+             {{input type="text" value=model.newRecipe.brewPlan}}
+        {{/if}}
 		 </label>
         </div>
     </div>
@@ -76,7 +76,9 @@
                 <div class="callout">
                     <h5 class="aroma-title">{{aroma.name}}</h5>
                     <p class="aroma-description">{{aroma.description}}</p>
-                    <button type="button" class="button" {{action "toggleAroma" aroma.id}}>Toggle aroma</button>
+                    {{input type="text" value=model.ingredient.amount}}
+                    <button type="button" class="button" {{action "toggleIngredient" aroma.name model.ingredient.amount}}>Toggle aroma</button>
+
                     <br>
                 </div>
             </div>

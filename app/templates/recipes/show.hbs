@@ -29,35 +29,38 @@
     </div>
 </div>
 <div class="row">
-    <div class="small-12 columns">
-        <h4>Ingredients:</h4>
-        <table>
-            <thead>
-                <tr>
-                    <th>
-                        Ingredient
-                    </th>
-                    <th>
-                        Amount
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        {{ingredient.name}}
-                    </td>
-                    <td>
-                        {{ingredient.ingredient}}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+	<div class="small-12 columns">
+		<h4>Ingredients:</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>
+						Ingredient
+					</th>
+					<th>
+						Amount
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+                {{model}}
+                {{#each aromas as |aroma|}}
+				<tr>
+					<td>
+						{{aroma.name}}
+					</td>
+					<td>
+
+					</td>
+				</tr>
+                {{/each}}
+			</tbody>
+		</table>
 
     </div>
 </div>
 <div class="row">
-    <div class="small-12 columns">
-        {{#link-to "recipes.index" class="alert button" }}Go Back{{/link-to}}
-    </div>
+	<div class="small-12 columns">
+		{{#link-to "recipes.index" class="alert button"}}Go Back{{/link-to}}
+	</div>
 </div>
