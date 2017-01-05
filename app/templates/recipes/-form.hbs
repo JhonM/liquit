@@ -1,55 +1,93 @@
 <form {{action "save" on="submit"}}>
-	<div class="row">
-		<div class="medium-12 columns">
-			<label>
+    <div class="row">
+
+        {{#if isEditing}}
+            Is Editing
+        {{/if}}
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
+            <label>
       		Name
+			{{#if isEditing}}
      		{{input type="text" value=model.name}}
+			{{else}}
+			{{input type="text" value=model.newRecipe.name}}
+            {{/if}}
     		</label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="medium-12 columns">
-			<label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
+            <label>
 		   Brew Date
+           {{#if isEditing}}
 		   {{input type="date" value=model.brewDAte}}
+           {{else}}
+           {{input type="date" value=model.newRecipe.brewDAte}}
+           {{/if}}
 		   </label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="medium-12 columns">
-			<label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
+            <label>
 		Description
+        {{#if isEditing}}
 		 {{input type="text" value=model.description}}
+         {{else}}
+          {{input type="text" value=model.newRecipe.description}}
+         {{/if}}
 		 </label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="medium-12 columns">
-			<label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
+            <label>
 		 Steep time
+         {{#if isEditing}}
 		 {{input type="number" value=model.steepTime}}
+         {{else}}
+          {{input type="number" value=model.newRecipe.steepTime}}
+         {{/if}}
 		 </label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="medium-12 columns">
-			<label>
-		 Brew Plan
-		 {{input type="text" value=model.brewPlan}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
+            <label>
+		Brew Plan
+        {{#if isEditing}}
+		     {{input type="text" value=model.brewPlan}}
+        {{else}}
+             {{input type="text" value=model.newRecipe.brewPlan}}
+        {{/if}}
 		 </label>
-		</div>
-	</div>
-	<div class="row small-up-1 medium-up-2 large-up-6">
-		{{#each model as |aroma|}}
-			{{#aroma-component title="aroma.title"}}
-				{{aroma.description}}
-			{{/aroma-component}}
-		{{/each}}
-	</div>
-	<div class="row">
-		<div class="medium-12 columns">
-			<button type="submit" class="success button" value="Save">Save</button>
-			{{#link-to "recipes.index" class="alert button" }}Cancel{{/link-to}}
-		</div>
-	</div>
+        </div>
+    </div>
+    <div>
+        {{#each model.newRecipe.aromas as |aroma|}}
+            {{aroma.name}}
+        {{/each}}
+    </div>
+    <div class="row small-up-1 medium-up-2 large-up-6">
+        {{#each model.aromas as |aroma|}}
+            <div class="column aroma">
+                <div class="callout">
+                    <h5 class="aroma-title">{{aroma.name}}</h5>
+                    <p class="aroma-description">{{aroma.description}}</p>
+                    {{input type="text" value=model.ingredient.amount}}
+                    <button type="button" class="button" {{action "toggleIngredient" aroma.name model.ingredient.amount}}>Toggle aroma</button>
+
+                    <br>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
+            <button type="submit" class="success button" value="Save">Save</button>
+            {{#link-to "recipes.index" class="alert button" }}Cancel{{/link-to}}
+        </div>
+    </div>
 </form>

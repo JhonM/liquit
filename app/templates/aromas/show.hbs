@@ -1,53 +1,68 @@
-{{header-navigation}}
 <div class="row">
-	<div class="small-12 columns">
-		<h1>{{model.name}}</h1>
-	</div>
+    <div class="small-12 columns">
+        <h1>{{model.name}}</h1>
+    </div>
 </div>
 <div class="row">
-	<div class="small-12 columns">
+    <div class="small-12 columns">
 
-		<h4>Vendor:</h4>
-		<p>{{model.vendor}}</p>
+        <h4>Vendor:</h4>
+        <p>{{model.vendor}}</p>
 
-	</div>
+    </div>
 </div>
-
 <div class="row">
-	<div class="small-12 columns">
+    <div class="small-12 columns">
 
-		<h4>Price:</h4>
-		<p>{{model.price}}</p>
+        <h4>Date bought:</h4>
+        <p>{{model.dateBought}}</p>
 
-	</div>
+    </div>
 </div>
 
 <div class="row">
-	<div class="small-12 columns">
+    <div class="small-12 columns">
 
-		<h4>Amount:</h4>
-		<p>{{model.amount}}</p>
+        <h4>Price:</h4>
+        <p>{{model.price}}</p>
 
-	</div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+
+        <h4>Amount:</h4>
+        <p>{{model.amount}}</p>
+
+    </div>
 </div>
 <div class="row">
-	<div class="small-12 columns">
+    <div class="small-12 columns">
 
-		<h4>Mix Ratio</h4>
-		<p>{{model.mixRatio}}</p>
+        <h4>Mix Ratio</h4>
+        <p>{{model.mixRatio}}</p>
 
-	</div>
+    </div>
 </div>
 <div class="row">
-	<div class="small-12 columns">
+    <div class="small-12 columns">
 
-		<h4>Link:</h4>
-		<p>{{model.link}}</p>
+        <h4>Link:</h4>
+        <p>{{model.link}}</p>
 
-	</div>
+    </div>
 </div>
 <div class="row">
-	<div class="small-12 columns">
-		{{#link-to "aromas.index" class="alert button" }}Go Back{{/link-to}}
-	</div>
+    <div class="small-12 columns">
+
+        <h4>Description:</h4>
+        <p>{{model.description}}</p>
+
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 columns">
+        {{#link-to "aromas.index" class="alert button" }}Go Back{{/link-to}}
+    </div>
 </div>

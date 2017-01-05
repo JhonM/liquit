@@ -1,72 +1,80 @@
 <form {{action "save" on="submit"}}>
-	<div class="row">
-		<div class="medium-12 columns">
-			<label>
+    <div class="row">
+        <div class="medium-12 columns">
+            <label>
 		      Name
 		      {{input type="text" placeholder="Donut" value=model.name}}
 		    </label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="medium-12 columns">
-			<label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
+            <label>
 		      Vendor
 		      {{input type="text" placeholder="Capella" value=model.vendor}}
 		    </label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="medium-12 columns">
-			<label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
+            <label>
 		      Price
 		      {{input type="number" min="0" step="any" placeholder="10" value=model.price}}
 		    </label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="medium-12 columns">
-			<label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
+            <label>
 		      Amount
 		      {{input type="number" min="0" step="any" placeholder="10" value=model.amount}}
 		    </label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="medium-12 columns">
-			<label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
+            <label>
 		      Mix ratio
 		      {{input type="number" min="0" step="any" placeholder="10" value=model.mixRatio}}
 		    </label>
-		</div>
-	</div>
+        </div>
+    </div>
     <div class="row">
-		<div class="medium-12 columns">
-			<label>
+        <div class="medium-12 columns">
+            <label>
 				Link to webshop
 				{{input type="text" placeholder="http://www.webshop.com" value=model.link}}
 			</label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="medium-12 columns">
-			<label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
+            <label>
 				Date Bought
 				{{input type="date" placeholder="9-2-2016" value=model.dateBought}}
 			</label>
-		</div>
-	</div>
+        </div>
+    </div>
     <div class="row">
-		<div class="medium-12 columns">
-			<label>
+        <div class="medium-12 columns">
+            <label>
 				Score
 				{{input type="number" min="0" max="10" step=".1" placeholder="score 1-10" value=model.score}}
 			</label>
-		</div>
-	</div>
-	<div class="row">
-		<div class="medium-12 columns">
-			<button type="submit" class="success button" value="Save">Save</button>
-			{{#link-to "aromas.index" class="alert button"}}Cancel{{/link-to}}
-		</div>
-	</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
+            <label>
+				Description
+				{{textarea type="text" placeholder="Description" value=model.description}}
+			</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
+            <button type="submit" class="success button" value="Save">Save</button>
+            {{#link-to "aromas.index" class="alert button" }}Cancel{{/link-to}}
+        </div>
+    </div>
 </form>
