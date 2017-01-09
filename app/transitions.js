@@ -24,17 +24,12 @@ export default function() {
         this.use('toLeft'),
         this.reverse('toRight')
     );
-
-    // Not working
     this.transition(
         this.toRoute('recipes.new'),
-        this.use('crossFade'),
-        this.reverse('crossFade')
+        this.use('crossFade')
     );
     this.transition(
         this.toRoute('aromas.new'),
-        this.use('crossFade'),
-        this.reverse('crossFade')
+        this.use('crossFade')
     );
-    // Not working end
 };
