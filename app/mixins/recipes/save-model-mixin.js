@@ -28,12 +28,25 @@ export default Ember.Mixin.create({
         },
         save: function() {
             var route = this;
-            this.currentModel.newRecipe.save().then(function() {
-                console.log('Saved!');
-                route.transitionTo('recipes');
+            let recipe = this.get('store').createRecord('recipe', {
+                name: "test recipe", description:"description rrr"
+            });
+            let aroma = this.get('store').createRecord('aroma', {
+                name: "aroma 1",
+                amount: 12
+            });
+
+            recipe.save().then(() => {
+                aroma.save();
             }, function() {
                 console.log('Failed to save the model');
-            });
+            })
+            // this.currentModel.newRecipe.save().then(function() {
+            //     console.log('Saved!');
+            //     route.transitionTo('recipes');
+            // }, function() {
+            //     console.log('Failed to save the model');
+            // });
         },
         willTransition() {
             // TODO Why do we need this?
