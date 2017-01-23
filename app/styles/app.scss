@@ -1,8 +1,10 @@
 @import "settings";
-@import 'foundation';
-@include foundation-everything(true);
+//@import 'foundation';
+//@include foundation-everything(true);
 
 @import 'base/variables';
 @import 'base/mixins';
 @import 'base/typography';
 @import 'theme/theme';
+
+@import 'base/animations';
