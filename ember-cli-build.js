@@ -14,9 +14,9 @@ module.exports = function (defaults) {
       		includePolyfill: true
   		},
 		// Add options here
-	//	"ember-cli-foundation-6-sass": {
-	//		"foundationJs": "all"
-	//	}
+		//"ember-cli-foundation-6-sass": {
+		//	"foundationJs": "all"
+		//}
 	});
 
 
